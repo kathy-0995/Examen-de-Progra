@@ -1,0 +1,97 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Fondo azul claro */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Encabezado */
+h1 {
+    text-align: center;
+    color: #0277bd; /* Azul frío */
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de los botones y descripciones en tres columnas */
+.exercise-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 20px; /* Espacio entre columnas */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Columna de botones */
+.exercise-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo de los botones */
+button {
+    display: block;
+    width: 100%;
+    background-color: #0288d1; /* Azul frío */
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover para resaltar los botones */
+button:hover {
+    background-color: #01579b; /* Azul frío más oscuro */
+    transform: scale(1.02);
+}
+
+/* Estilo de las descripciones */
+.description {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-left: 8px solid #17053a;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    color: #555; /* Texto gris oscuro */
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #17053a;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilo responsive para pantallas más pequeñas */
+@media (max-width: 900px) {
+    .exercise-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    }
+}
+
+@media (max-width: 600px) {
+    .exercise-container {
+        grid-template-columns: 1fr; /* Una columna */
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+}
